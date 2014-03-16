@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml">
+
+<head>
+	<meta charset="UTF-8">
+	<title>水交デザインオフィス - 大阪のウェブ制作事務所</title>
+	<meta name="description" content="" />
+	
+	<meta property="og:title" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/default.jpg" />
+	<meta property="image_src" content="/default.jpg" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="fb:admins" content="" />
+	<meta property="fb:app_id" content="" />
+	<meta property="og:description" content="" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=0.5,minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+	<link href='http://fonts.googleapis.com/css?family=Cabin+Condensed' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,500,700,600' rel='stylesheet' type='text/css'>
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<header id="header">
+		<p id="logo-wrapper"><a href="/"><img id="logo" src="img/logo.png" alt="" width="138" height="128"></a></p>
+		<h1 id="logotype"><img src="img/logotype.png" alt="水交デザインオフィス" width="232" height="19"></h1>
+	</header>
+	<main>
+		<section id="thanks">
+			<div class="inner clearfix">
+				<h2>Thank You!<span>お問い合わせ、誠にありがとうございます</span></h2>
+				<section>
+					<h3>あなたのお問い合わせ、受け取りました</h3>
+					<p>通常2営業日中にお返事差し上げます。それを超えて返事がない場合、システムの不具合のおそれがありますので、お手数ですが下記までご連絡ください。</p>
+					<dl>
+						<dt>電話</dt>
+						<dd>06-6302-3366</dd>
+						<dt>E-mail</dt>
+						<dd>info[at]suikoudesign.com（迷惑メール防止のため、表記を変えています。[at]はアットマークに変えてください。）</dd>
+					</dl>
+					<p>誠にありがとうございます。下記のリンクから、元のページにお戻りください。</p>
+					<p><a href="/">トップページへ戻る</a></p>
+					
+			</div>
+		</section><!-- thanks -->
+	</main>
+	<p id="copyright">SUIKOU Design Office All Right Rederved.</p>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/masonry.js"></script>
+	<script src="js/smoothScroll.js"></script>
+	<script src="js/get-scroll.js"></script>
+	<script>
+		var flag;
+		var min_width = 1024;
+		 
+		function check() {
+		if ( $('html').width() < min_width ) {
+			if ( flag ) {
+				$('#portfolio-index').masonry('destroy');
+				flag = 0;
+			}
+			} else {
+			$('#portfolio-index').masonry({
+					itemSelector: '.item',
+			});
+				flag = 1;
+			}
+		}
+ 
+		$(function(){
+			check();
+		});
+		 
+		$(window).resize(function () {
+			check();
+		});	
+	</script>
+</body>
+</html>
